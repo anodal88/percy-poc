@@ -1,0 +1,31 @@
+{
+  "name": "percy-poc",
+  "version": "1.0.0",
+  "description": "A poc of percy io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "percy:cypress:open":"percy exec -- cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anodal88/percy-poc.git"
+  },
+  "keywords": [
+    "percy"
+  ],
+  "author": "Antonio Nodal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anodal88/percy-poc/issues"
+  },
+  "homepage": "https://github.com/anodal88/percy-poc#readme",
+  "devDependencies": {
+    "@percy/cypress": "^1.0.0"
+  },
+  "dependencies": {
+    "cypress": "^3.1.5"
+  }
+}
