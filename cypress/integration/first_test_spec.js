@@ -1,4 +1,3 @@
-
 describe('@percy/cypress', function() {
     describe('first test',function(){
         it("Does not much",function(){
@@ -9,13 +8,14 @@ describe('@percy/cypress', function() {
                 clientFirstName:"Antonio",
                 clientLastName:"Nodal",
                 contactUsText:"Contact Us"
-            }        
+            }   
             //- visits the home page
             cy.visit(state.index)
             //take an snapshot
             //cy.screenshot()
             // Take a snapshot for visual diffing
-            cy.percySnapshot()
+            cy.percySnapshot('test1')
+            cy.percySnapshot('test2')
             console.log("here")    
             //- click on a link
             cy.contains('Checkout').click()
@@ -27,7 +27,7 @@ describe('@percy/cypress', function() {
                 .should('have.value',state.clientFirstName)
             cy.contains(state.contactUsText).click()  
             cy.url().should('include',state.contactPg)
-            cy.contains('Home').click()
+            cy.contains('Home').click() 
         })
     })
 })
