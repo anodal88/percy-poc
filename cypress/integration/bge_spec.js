@@ -24,6 +24,8 @@ describe('@percy/cypress', function () {
             //ScreenShot from the home page
             cy.percySnapshot()
 
+            
+
             cy.contains('Log in').then(($btn) => {
                 if ($btn) {
                 //login
